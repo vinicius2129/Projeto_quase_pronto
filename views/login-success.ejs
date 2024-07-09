@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Sucesso</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/style_login_sucesse_login.css">
+</head>
+<body>
+    <nav id="navbar" class="navbar navbar-dark bg-dark">
+        <a id="titulo" class="navbar-brand" href="#">Gestor de Finanças Pessoais</a>
+      <a id="botao_usuarios" class="btn btn-outline-light" onclick="window.location.href='/usuarios'">Listar Usuários</a>
+        <a class="btn btn-outline-light" href="/logout">Sair</a>
+    </nav>
+
+    <p id="mnome">Bem-vindo, <%= username %>!</p>
+
+    <h3>Adicionar Transação</h3>
+    <div class="container"> 
+        <form id="transactionForm" method="POST">
+            <label for="descricao">Nome da Transação:</label><br>
+            <input type="text" id="descricao" name="descricao" required><br>
+
+            <label for="categoria">Categoria:</label><br>
+            <input type="text" id="categoria" name="categoria" required><br>
+
+            <label for="quantidade">Quantidade:</label><br>
+            <input type="number" id="quantidade" name="quantidade" required><br>
+
+            <label for="tipo">Tipo:</label><br>
+            <select id="tipo" name="tipo" required>
+                <option value="receita">Receita</option>
+                <option value="despesa">Despesa</option>
+            </select><br>
+
+            <label for="data">Data:</label><br>
+            <input type="date" id="data" name="data" required><br>
+
+            <button type="submit">Adicionar Transação</button>
+        </form>
+    </div>
+
+    <h3>Gráfico de Transações</h3>
+    
+        <canvas id="myChart" width="600" height="600"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('myChart').getContext('2d');
+
+    let data = {
+        labels: [],
+        datasets: [
+            {
+                label: 'Receitas',
+                backgroundColor: '#007bff',
+                data: []
+            },
+            {
+                label: 'Despesas',
+                backgroundColor: '#dc3545',
+                data: []
+            }
+        ]
+    };
+
+    const options = {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    };
+
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+    });
+
+    function atualizarGrafico(transacoes) {
+        transacoes.forEach(transacao => {
+            myChart.data.labels.push(transacao.descricao); // Adiciona o nome da transação como label
+
+            if (transacao.tipo === 'receita') {
+                myChart.data.datasets[0].data.push(transacao.quantidade); // Adiciona a receita ao dataset de receitas
+                myChart.data.datasets[1].data.push(0); // Mantém o alinhamento nos datasets (despesas)
+            } else if (transacao.tipo === 'despesa') {
+                myChart.data.datasets[0].data.push(0); // Mantém o alinhamento nos datasets (receitas)
+                myChart.data.datasets[1].data.push(transacao.quantidade); // Adiciona a despesa ao dataset de despesas
+            }
+        });
+
+        myChart.update(); // Atualiza o gráfico
+    }
+
+    document.getElementById('transactionForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const descricao = document.getElementById('descricao').value;
+        const categoria = document.getElementById('categoria').value;
+        const quantidade = parseFloat(document.getElementById('quantidade').value);
+        const tipo = document.getElementById('tipo').value;
+        const data = document.getElementById('data').value;
+
+        const transacao = {
+            descricao: descricao,
+            categoria: categoria,
+            quantidade: quantidade,
+            tipo: tipo,
+            data: data
+        };
+
+        // Adiciona a transação ao gráfico
+        atualizarGrafico([transacao]);
+
+        // Limpa o formulário após a submissão
+        document.getElementById('descricao').value = '';
+        document.getElementById('categoria').value = '';
+        document.getElementById('quantidade').value = '';
+        document.getElementById('tipo').value = 'receita'; // Define 'receita' como padrão
+        document.getElementById('data').value = '';
+
+        // Você pode adicionar lógica adicional aqui, como enviar os dados para o backend
+    });
+
+});
+    </script>
+    <script src="/JS/script2.js"></script> <!-- Certifique-se de que este script está carregando corretamente -->
+</body>
+</html>

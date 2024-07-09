@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/style_pagina_login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Finanças</title>
+</head>
+<body>
+    
+    <form action="/pagina_login" method="POST">
+    <div class="titulo">Gestor de Finanças <br> Pessoais </div>
+    <div id="seu_email">Seu e-mail</div>
+    <input type="email" id="email" name="email" placeholder="Ex.: usuario1@example.com" required>
+    <div id="seu_password">Sua senha</div>
+    <input type="password" id="password" name="password" placeholder="Ex.: senha1" required>
+
+    <button type="submit" id="botao-entrar" class="btn btn-primary">Entrar</button>
+
+    </form>
+   <a class="link_cadastro" href="/pagina_cadastro">cadastre-se</a> 
+
+   <% if (error) { %>
+       <p id="error"><%= error %></p>
+   <% } %>
+   
+   <img class="imagem-direita" id="imagem_principal" src='../imagem/OIG2 (1).jpg'>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+</head>
+<body>
+    <h1>Lista de Usuários</h1>
+    <a href="/pagina_cadastro">Cadastrar Usuário</a>
+    <ul>
+        <% usuarios.forEach(usuario => { %>
+            <li><%= usuario.nome %> - <%= usuario.email %> <a href="/usuarios/excluir/<%= usuario.id %>">Excluir</a> <a href="/usuarios/atualizar/<%= usuario.id %>">Atualizar</a></li>
+        <% }); %>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Usuário</title>
+</head>
+<body>
+    <h1>Atualizar Usuário</h1>
+    <form action="/usuarios/atualizar/<%= usuario.id %>" method="POST">
+        <input type="text" name="nome" value="<%= usuario.nome %>" required><br>
+        <input type="email" name="email" value="<%= usuario.email %>" required><br>
+        <input type="password" name="senha" value="<%= usuario.senha %>" required><br>
+        <button type="submit">Atualizar</button>
+    </form>
+</body>
+</html>

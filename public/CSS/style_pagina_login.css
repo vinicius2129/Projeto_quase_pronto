@@ -1,0 +1,114 @@
+body, html {
+    background-color: #7cadb4;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.imagem-direita {
+    height: 100vh;
+    width: auto; 
+}
+
+.titulo{
+    position: absolute;
+    top: 8%;
+    left: 7%;
+    font-size: 430%;
+    font-weight: 600;
+    color: #212747;
+    line-height: 1.2em;
+}
+
+#seu_email{
+    position: absolute;
+    top: 36%;
+    left: 7%;
+    font-size: 160%;
+    font-weight: 600;
+    color: #212747;
+}
+#seu_password{
+    position: absolute;
+    top: 52%;
+    left: 7%;
+    font-size: 160%;
+    font-weight: 600;
+    color: #212747;
+}
+
+input::placeholder {
+    color: #ffffff60; /* Cor do placeholder */
+  }
+  
+input[type="email"],
+input[type="password"]{
+    border: none;
+    width: 28vw;
+    height: 6vh;
+    font-size: 20px;
+    text-indent: 12px;
+    background-color: #3c5677;
+    border-radius: 8px;
+    color: #cccccc;
+}
+
+input[type="email"]{
+    position: absolute;
+    top: 42%;
+    left: 7%;
+} 
+
+input[type="password"]{
+    position: absolute;
+    top: 59%;
+    left: 7%;
+}
+.interacoes{
+
+    color: #212747;
+}
+.seletor-do-seu-elemento br {
+    line-height: 0.2em; /* ajuste o valor conforme necessário */
+}
+.link_cadastro{   
+    position: absolute;
+    top: 75%;
+    left: 21%;
+    font-size: 160%;
+    font-weight: 600;
+    text-decoration: underline;
+    color: #212747;
+}
+
+.link_cadastro:hover {
+    text-decoration: underline;
+    color: #212747ad;
+}
+#botao-entrar{
+    position: absolute;
+    top: 74%;
+    left: 7%;
+    background-color: #212747;
+    border-width: 2px;
+    border-color: #212747;
+    padding: 14px 59px 15px 58px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#botao-entrar:hover{
+    background-color: white;
+    border-color: #212747;
+    color: #212747;
+}
+#error{
+    color: #811919;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 68%;
+    left: 10%;
+}
