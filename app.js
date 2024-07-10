@@ -39,10 +39,25 @@ app.get("/pagina_cadastro", (req, res) => {
 });
 
 app.post("/pagina_cadastro", (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, confirmPassword, inpnascimento } = req.body;
+
+  // Verificações de validação
+  if (!name) {
+    return res.redirect("/pagina_cadastro?error=Nome é obrigatório.");
+  }
+  if (!email || !email.includes('@')) {
+    return res.redirect("/pagina_cadastro?error=Email inválido.");
+  }
+  if (password !== confirmPassword) {
+    return res.redirect("/pagina_cadastro?error=As senhas não coincidem.");
+  }
+
+  
+  // Caso todos os campos estejam válidos
   registerUserModel(name, email, password);
   res.redirect("./pagina_login");
 });
+
 
 // Rota para a página de login
 app.get("/pagina_login", (req, res) => {

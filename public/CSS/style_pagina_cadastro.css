@@ -1,211 +1,211 @@
 body{
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #7cadb4;
-}
-
-#container{
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    display: flex;
-    background-color: #dde8eb;
-    width: 45vw;
-    box-shadow: 
-    -11px 0 10px -11px rgba(0, 0, 0, 0.5),
-    11px 0 10px -11px rgba(0, 0, 0, 0.5);
-
-}
-form{
+  margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #7cadb4;
+}
+
+#container{
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  display: flex;
+  background-color: #dde8eb;
+  width: 45vw;
+  box-shadow: 
+  -11px 0 10px -11px rgba(0, 0, 0, 0.5),
+  11px 0 10px -11px rgba(0, 0, 0, 0.5);
+
+}
+form{
+display: flex;
+justify-content: center;
+align-items: center;
 }
 #conteudo{
-    font-family: Roboto;
-    margin-left: 22%;
-    position: relative;
-    top: 2%;
-    font-size: 60px;
-    height: 0%;
+  font-family: Roboto;
+  margin-left: 22%;
+  position: relative;
+  top: 2%;
+  font-size: 60px;
+  height: 0%;
 }
 #box{
-    position: absolute;
-    margin-left: 23%;
-    top: 12%;
-    height: 7.5px;
-    width: 40px;
-    background-color: #212747;
+  position: absolute;
+  left:38%;
+  top: 12%;
+  height: 7.5px;
+  width: 40px;
+  background-color: #212747;
 }
 .titulo{
-    background: #212747;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  background: #212747;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
-  input[type="email"],
-  input[type="password"],
-  input[type="number"],
-  input[type="text"]{
-      border: none;
-      width: 23.5vw;
-      height: 5vh;
-      text-indent: 12px;
-      background-color: #ffffff;
-      border: 1px solid rgb(0, 0, 0);
-      border-radius: 10px;
-      
-  }
-  
-  #nome{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 16%;
-    
-  }
-  #name{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 21%;
-    font-size: 18px;
-  }
-  #eemail{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 27%;
-  }
-  #email{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 32%;
-    font-size: 18px;
-  }
-  #nascimento{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 39%;
-  }
-  #inpnascimento{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 45%;
-    width: 10.3vw;
-    height: 4.3vh;
-    font-size: 18px;
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="text"]{
+    border: none;
+    width: 23.5vw;
+    height: 5vh;
+    text-indent: 12px;
+    background-color: #ffffff;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
-    padding-left: 12px
-  }
-  #sexo{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 51%;
-  }
-  #masculino{
-    font-size: 22px;
-    position: absolute;
-    left: 26%;
-    position: absolute;
-    top: 57%;
-  }
-  #label-masculino{
-    position: absolute;
-    top: 56.7%;
-    left: 29.5%;
-    font-weight: 600;
-  }
-  #feminino{
-    font-size: 22px;
-    position: absolute;
-    left: 57%;
-    top: 57%;
-  }
-  #label-feminino{
-    position: absolute;
-    top: 56.7%;
-    left: 60.5%;
-    font-weight: 600;
-  }
-  #senha1{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 61%; 
     
-  }
-  #password{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 66%;
-    font-size: 18px;
-  }
-  #senha2{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 73%;
-  }
-  #confirmPassword{
-    font-size: 22px;
-    margin-left: 23%;
-    position: absolute;
-    top: 78%;
-    font-size: 18px;
-    
-  }
-  input[type="radio"] {
-    appearance: none;
-    width: 18px; 
-    height: 18px; 
-    border-radius: 50%; 
-    border: 2px solid #000000; 
-    outline: none;
-  }
-  input[type="radio"]:checked {
-    background-color: #212747; 
-  }
-  input[type="radio"]:hover{
-    background-color: #21274767;
-    cursor: pointer;
-  }
+}
+
+#nome{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 16%;
+  
+}
+#name{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 21%;
+  font-size: 18px;
+}
+#eemail{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 27%;
+}
+#email{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 32%;
+  font-size: 18px;
+}
+#nascimento{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 39%;
+}
+#inpnascimento{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 45%;
+  width: 10.3vw;
+  height: 4.3vh;
+  font-size: 18px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding-left: 12px
+}
+#sexo{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 51%;
+}
+#masculino{
+  font-size: 22px;
+  position: absolute;
+  left: 26%;
+  position: absolute;
+  top: 57%;
+}
+#label-masculino{
+  position: absolute;
+  top: 56.7%;
+  left: 29.5%;
+  font-weight: 600;
+}
+#feminino{
+  font-size: 22px;
+  position: absolute;
+  left: 57%;
+  top: 57%;
+}
+#label-feminino{
+  position: absolute;
+  top: 56.7%;
+  left: 60.5%;
+  font-weight: 600;
+}
+#senha1{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 61%; 
+  
+}
+#password{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 66%;
+  font-size: 18px;
+}
+#senha2{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 73%;
+}
+#confirmPassword{
+  font-size: 22px;
+  margin-left: 23%;
+  position: absolute;
+  top: 78%;
+  font-size: 18px;
+  
+}
+input[type="radio"] {
+  appearance: none;
+  width: 18px; 
+  height: 18px; 
+  border-radius: 50%; 
+  border: 2px solid #000000; 
+  outline: none;
+}
+input[type="radio"]:checked {
+  background-color: #212747; 
+}
+input[type="radio"]:hover{
+  background-color: #21274767;
+  cursor: pointer;
+}
 
 
 #cadastrar{
-  position: absolute;
-  top: 94%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #212747;
-  border-width: 2px;
+position: absolute;
+top: 94%; 
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #212747;
+border-width: 2px;
+border-color: #212747;
+padding: 14px 59px 15px 58px;
+font-weight: 700;
+text-transform: uppercase;
+}
+#cadastrar:hover{
+  background-color: white;
   border-color: #212747;
-  padding: 14px 59px 15px 58px;
-  font-weight: 700;
-  text-transform: uppercase;
-  }
-  #cadastrar:hover{
-    background-color: white;
-    border-color: #212747;
-    color: #212747;
-  }
+  color: #212747;
+}
 
 
-  #error-message{
-    color: #811919;
-    font-size: 16px;
-    font-weight: bold;
-    position: absolute;
-    top: 85%; 
-    left: 26%;
-  }
+#error-message{
+  color: #811919;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 85%; 
+  left: 43%;
+}

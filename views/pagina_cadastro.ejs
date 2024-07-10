@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,42 +8,35 @@
     <title>cadastro</title>
 </head>
 <body>
-
-
-    <form id="form-cadastro" method="POST">
-    
-   <div id="container">
-
-    <div id="conteudo">
-        <p class="titulo">Cadastro</p>
-    </div>
-       <div id="nome" >Nome:</div>
-    <input id="name" name="name" type="text" required>
-    <div id="nascimento">Data de nascimento:</div>
-    <input id="inpnascimento" type="date" required>
-    <div id="sexo">Sexo:</div>
-    <input type="radio" id="masculino" name="opcao-sexo">
-    <label id="label-masculino" for="Masculino">Masculino</label>
-    <input type="radio" id="feminino" name="opcao-sexo">
-    <label id="label-feminino" for="feminino">feminino</label>
-    <div id="senha1">senha:</div>
-    <input id="password" name="password" type="password" placeholder="Ex.: senha1" required>
-    <div id="senha2">confirmar senha:</div>
-    <input name="confirmPassword" id="confirmPassword" type="password"  required>
-    <div id="eemail">email:</div>
-    <input id="email" name="email" type="email" placeholder="Ex.: usuario1@example.com" required>
-
-    <button id="cadastrar" type="submit" class="btn btn-primary">cadastrar</button>
-
-</form>
+    <form id="form-cadastro" method="POST" onsubmit="return validateForm()">
+        <div id="container">
+            <div id="conteudo">
+                <p class="titulo">Cadastro</p>
+            </div>
+            <div id="nome">Nome:</div>
+            <input id="name" name="name" type="text" required>
+            <div id="nascimento">Data de nascimento:</div>
+            <input id="inpnascimento" name="nascimento" type="date" required>
+            <div id="sexo">Sexo:</div>
+            <input type="radio" id="masculino" name="opcao-sexo">
+            <label id="label-masculino" for="masculino">Masculino</label>
+            <input type="radio" id="feminino" name="opcao-sexo">
+            <label id="label-feminino" for="feminino">feminino</label>
+            <div id="senha1">senha:</div>
+            <input id="password" name="password" type="password" placeholder="Ex.: senha1" required>
+            <div id="senha2">confirmar senha:</div>
+            <input name="confirmPassword" id="confirmPassword" type="password" required>
+            <div id="eemail">email:</div>
+            <input id="email" name="email" type="email" placeholder="Ex.: usuario1@example.com" required>
+            <button id="cadastrar" type="submit" class="btn btn-primary">cadastrar</button>
+        </div>
+    </form>
     <% if (error) { %>
         <p id="error-message" style="color: red;"><%= error %></p>
     <% } else { %>
         <p id="error-message" style="color: red;"></p>
     <% } %>
-        <div id="box"></div>
-    
-   </div>
-    <script src="/JS/script.js"></script> 
+    <div id="box"></div>
+
 </body>
 </html>

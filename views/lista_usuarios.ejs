@@ -3,15 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+    #cadastrar{
+       position: absolute;
+      left:84%;
+    }
+  </style>
     <title>Lista de Usuários</title>
 </head>
 <body>
-    <h1>Lista de Usuários</h1>
-    <a href="/pagina_cadastro">Cadastrar Usuário</a>
+    <nav id="navbar" class="navbar navbar-dark bg-dark">
+        <a id="titulo" class="navbar-brand" href="#">Lista de Usuários</a>
+      <a id="cadastrar" class="btn btn-outline-light" href="/pagina_cadastro">Cadastrar Usuário</a>
+      <a  class="btn btn-outline-light" href="/pagina_login/success">voltar</a>
+    </nav>
+
+   <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
     <ul>
         <% usuarios.forEach(usuario => { %>
-            <li><%= usuario.nome %> - <%= usuario.email %> <a href="/usuarios/excluir/<%= usuario.id %>">Excluir</a> <a href="/usuarios/atualizar/<%= usuario.id %>">Atualizar</a></li>
+          <p>
+    
+          </p>
+            <tr>
+           <td style="width: 250px;"><%= usuario.nome %></td> <td style="width: 250px;"> <%= usuario.email %> </td> <td> <div class="btn-group" role="group" aria-label="Exemplo básico"> <a  class="btn btn-secondary"  href="/usuarios/excluir/<%= usuario.id %>">Excluir</a> <a  class="btn btn-secondary" href="/usuarios/atualizar/<%= usuario.id %>">Atualizar</a></td>
         <% }); %>
-    </ul>
+     </tr>
+                </tbody>
+</table>
 </body>
 </html>

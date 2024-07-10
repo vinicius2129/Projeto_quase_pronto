@@ -13,3 +13,4 @@ document.getElementById("form-cadastro").addEventListener("submit", function(eve
         event.preventDefault();
     }
 });
+
